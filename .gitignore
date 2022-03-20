@@ -4,3 +4,4 @@
 /packages/express-api/node_modules/
 /packages/private-config/prod/
 yarn.lock
+/packages/electron-app/out/

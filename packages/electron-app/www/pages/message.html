@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>Electron App</title>
+  <script src="http://code.jquery.com/jquery-latest.js"></script>
+</head>
+<style>
+  #container {
+    width: 960px;
+    margin: 0 auto;
+  }
+
+  #primary {
+    float: left;
+    width: 240px;
+  }
+
+  #content {
+    float: left;
+    width: 480px;
+  }
+
+  #secondary {
+    float: left;
+    width: 240px;
+  }
+
+  #footer {
+    clear: both;
+  }
+</style>
+
+<body>
+<div id="container">
+  <div id="header">
+    <p>Header</p>
+  </div>
+
+  <div id="primary">
+    <p>Primary Sidebar</p>
+  </div>
+
+  <div id="content">
+    <div id="messages">
+
+    </div>
+    <form name="ipcForm" onSubmit="JavaScript:sendForm(event)">
+      message:<br>
+      <input type="text" name="message" id="message" value="John">
+      <br>
+      <input type="submit" value="Submit">
+    </form>
+  </div>
+
+  <div id="secondary">
+    <p>Users</p>
+
+  </div>
+
+  <div id="footer">
+    <p>Footer</p>
+  </div>
+</div>
+
+
+<button onclick="goToFirstWindow()">
+  Go to Main Window
+</button>
+
+
+<script src='../scripts/messages-page.js'></script>
+<script>
+  const ipc = window.require('electron').ipcRenderer;
+  const {remote} = require('electron');
+
+  function goToFirstWindow() {
+    //code for some other action to be performed
+
+    //Code to close the window after doing other actions
+    ipc.send('logtoconsole');
+    remote.getChildWindows().close();
+  }
+</script>
+</body>
+</html>

@@ -1,4 +1,12 @@
 {
   "host": "0.0.0.0",
-  "port": 8888
+  "port": 8888,
+  "secret": "cockandballtorture",
+  "database": {
+    "username": "dev",
+    "password": "devpassword",
+    "database_name": "electron-web-api",
+    "hostname": "192.168.2.5",
+    "port": 3306
+  }
 }
