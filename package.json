@@ -1,7 +1,12 @@
 {
-  "name": "$name$",
-  "version": "$version$",
-  "dependencies": {
-    $END$
+  "name": "electron-test-w-api",
+  "private": true,
+  "version": "1.0.0",
+  "author": "braddevans",
+  "workspaces": [
+    "packages/*"
+  ],
+  "devDependencies": {
+    "chalk": "^2.0.1"
   }
 }

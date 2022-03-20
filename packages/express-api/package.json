@@ -3,7 +3,7 @@
   "version": "0.0.1-dev",
   "description": "",
   "scripts": {
-    "express-start": "set type='dev' && nodemon ./src/api/express.js"
+    "express-start": "set type='dev' && nodemon express.js"
   },
   "dependencies": {
     "cookie-parser": "^1.4.6",
