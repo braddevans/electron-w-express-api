@@ -10,7 +10,8 @@ module.exports = (sequelize) => {
             autoIncrement: true
         },
         user_id: DataTypes.INTEGER,
-        username: DataTypes.STRING,
+        created_at: DataTypes.TIME,
+        updated_at: DataTypes.DateTime,
         Message: DataTypes.STRING(6000),
     }, {sequelize, modelName: 'messages'});
 
