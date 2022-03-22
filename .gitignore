@@ -1,7 +1,17 @@
+# project folders
 .idea/
+
+# Node Modules for each prokect and workspace
 /node_modules/
 /packages/electron-app/node_modules/
 /packages/express-api/node_modules/
+
+# disable commiting production configuration
 /packages/private-config/prod/
+
+# node project lock
+/packages/express-api/package-lock.json
 yarn.lock
+
+# electron build out files
 /packages/electron-app/out/
